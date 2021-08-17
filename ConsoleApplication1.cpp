@@ -1,38 +1,36 @@
-// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Name: John Marc Meyer
+//Date: 08/16/2021
+//Course: INFO 3200
+//Description: This program calucates the cost of getting to a destination using a vechile
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
 	//variables
-	int totalMilesPerDay;
-	int costOfGas;
-	int avgMilePerGallon;
-	int parkingFees;
+	float totalMilesPerDay;
+	float costOfGas;
+	float avgMilePerGallon;
+	float parkingFees;
+	float finalCalc;
 
 	//get user input and store it
-	std::cout << "Enter in the total miles driven per day: \n";
-	std::cin >> totalMilesPerDay;
-	std::cout << "Enter in the cost per gallon of gasoline: \n";
-	std::cin >> costOfGas;
-	std::cout << "Enter in the average miles per gallon: \n";
-	std::cin >> avgMilePerGallon;
-	std::cout << "Enter in the parking fees per day: \n";
-	std::cin >> parkingFees;
-
+	cout << "Enter in the total miles driven per day: ";
+	cin >> totalMilesPerDay;
+	cout << "Enter in the cost per gallon of gasoline: ";
+	cin >> costOfGas;
+	cout << "Enter in the average miles per gallon: ";
+	cin >> avgMilePerGallon;
+	cout << "Enter in the parking fees per day: ";
+	cin >> parkingFees;
+	
 	//do calculations
+	finalCalc = (((totalMilesPerDay / avgMilePerGallon) * costOfGas) + parkingFees);
+	cout << "The final cost of the trip is $" << finalCalc;
+	
+	//end program
 	return 0;
 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
